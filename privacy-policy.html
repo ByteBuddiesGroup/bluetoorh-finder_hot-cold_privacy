@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Bluetooth Finder: Hot/Cold</title>
+    <title>Privacy Policy - Bluetooth Finder: Hot/Cold</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -44,74 +44,99 @@
     </style>
 </head>
 <body>
-    <h1>Privacy Policy — Bluetooth Finder: Hot/Cold</h1>
-    
+    <h1>Privacy Policy - Bluetooth Finder: Hot/Cold</h1>
+
     <div class="meta-info">
-        <p><strong>Effective date:</strong> January 7, 2026</p>
+        <p><strong>Effective date:</strong> June 22, 2026</p>
         <p><strong>App name:</strong> Bluetooth Finder: Hot/Cold</p>
         <p><strong>Developer:</strong> Artem Chebotarenko (Byte Buddies)</p>
         <p><strong>Contact:</strong> <a href="mailto:group.byte.buddies@gmail.com">group.byte.buddies@gmail.com</a></p>
     </div>
 
     <h2>1) Overview</h2>
-    <p>Bluetooth Finder: Hot/Cold helps you locate nearby Bluetooth devices by scanning for Bluetooth signals and showing proximity feedback based on signal strength (RSSI). This policy explains what data the app accesses and how it is used.</p>
+    <p>Bluetooth Finder: Hot/Cold helps you locate nearby Bluetooth devices by scanning for Bluetooth signals and showing proximity feedback based on signal strength (RSSI). This policy explains what data the app accesses, what stays on your device, and what may be sent to online services used by the app.</p>
 
-    <h2>2) Data the app accesses</h2>
-    <p>When you use the app, it may access and display:</p>
+    <h2>2) Bluetooth and local app data</h2>
+    <p>When you use the app, it may access and display nearby Bluetooth device information during scanning, such as:</p>
     <ul>
-        <li><strong>Bluetooth device information</strong> of devices around you during scanning, such as:
-            <ul>
-                <li>Device name (if available)</li>
-                <li>Bluetooth address / device identifier (MAC / ID)</li>
-                <li>Signal strength (RSSI)</li>
-            </ul>
-        </li>
-        <li><strong>Saved device list</strong> ("My devices"), if you choose to save devices in the app.</li>
+        <li>Device name, if available.</li>
+        <li>Bluetooth address or device identifier (MAC / ID).</li>
+        <li>Signal strength (RSSI).</li>
+        <li>Manufacturer or tracker type information inferred from Bluetooth advertising data.</li>
     </ul>
-    <p><strong>Optional</strong> (only if you enable it):</p>
-    <ul>
-        <li>Coarse location label / last-seen location note (e.g., a user-provided label or a system-provided coarse location depending on implementation and Android version).</li>
-    </ul>
+    <p>If you use app features that save or customize devices, the app may store related data locally, such as saved devices, pinned devices, cached device names, app preferences, and last-seen details such as timestamp and RSSI.</p>
+    <p>The app does not upload your Bluetooth scan results, saved device list, pinned devices, or Bluetooth scan history to our own backend server.</p>
 
-    <h2>3) How the app uses this data</h2>
-    <p>The app uses the data only to:</p>
+    <h2>3) Firebase and online service data</h2>
+    <p>The app uses Google Firebase services to operate, improve, and monitor the app. Depending on how you use the app, Firebase may receive technical identifiers, device and app information, event timestamps, and diagnostic data.</p>
     <ul>
-        <li>Show nearby devices and their signal strength.</li>
-        <li>Provide proximity guidance in Find Mode ("hot/cold" feedback).</li>
-        <li>Save devices you mark as "My devices".</li>
-        <li>Store "last seen" information for saved devices (timestamp, RSSI, and optional location label if enabled).</li>
+        <li><strong>Firebase Analytics:</strong> used for product interaction events such as screen views, Find Mode usage, sort mode changes, opening the BlueTag invite page, submitting the invite form, tapping the Play Store link, tapping report-problem actions, and review prompts. We do not send submitted email addresses as Analytics event parameters.</li>
+        <li><strong>Firebase Remote Config:</strong> used to fetch app configuration, such as whether the BlueTag page shows closed-testing invite mode or an available Play Store link.</li>
+        <li><strong>Firebase Crashlytics:</strong> used to collect crash reports and diagnostics, which may include stack traces, app version, device model, operating system version, and other technical crash context.</li>
+        <li><strong>Cloud Firestore:</strong> used only when you voluntarily submit an email address for the BlueTag closed test invitation flow.</li>
     </ul>
+    <p>Firebase services are provided by Google. Google's handling of data is governed by Google's applicable privacy and Firebase terms.</p>
 
-    <h2>4) Data sharing</h2>
-    <ul>
-        <li>The app <strong>does not sell</strong> your data.</li>
-        <li>The app <strong>does not share</strong> your Bluetooth scan results or saved device data with third parties.</li>
-        <li>The app <strong>does not send</strong> your saved device list to any backend server (local-only design).</li>
-    </ul>
+    <h2>4) BlueTag closed-test email collection</h2>
+    <p>If the BlueTag page is in closed-testing mode, you may choose to submit your email address to request an invitation to the BlueTag closed test. This is optional.</p>
+    <p>When you submit an invite request, we store the email address in Firebase Cloud Firestore together with operational fields needed to process the request, such as a normalized email value, source screen, app package, app version, request timestamps, and request status.</p>
+    <p>We use this email address only to manage or send BlueTag closed-test invitations and related testing communication. We do not sell the email address, and we do not use it for unrelated marketing.</p>
 
-    <h2>5) Data storage and retention</h2>
+    <h2>5) How we use data</h2>
+    <p>We use data to:</p>
     <ul>
-        <li>Saved devices and last-seen information are stored <strong>locally on your device</strong>.</li>
-        <li>Data remains until you remove saved devices in-app, clear app storage, or uninstall the app.</li>
-    </ul>
-
-    <h2>6) Permissions</h2>
-    <p>The app may request permissions required by Android to scan for Bluetooth devices, such as:</p>
-    <ul>
-        <li>Bluetooth scanning and connection permissions (e.g., BLUETOOTH_SCAN, BLUETOOTH_CONNECT on Android 12+).</li>
-        <li>On some Android versions, the system may require Location permission for Bluetooth scanning and/or optional last-seen location features. If requested, it is used only to enable those functions.</li>
+        <li>Show nearby Bluetooth devices and signal strength.</li>
+        <li>Provide proximity guidance in Find Mode.</li>
+        <li>Remember app preferences, saved devices, pinned devices, and cached names on your device.</li>
+        <li>Operate Remote Config-controlled app experiences.</li>
+        <li>Understand aggregate product usage and improve app quality.</li>
+        <li>Investigate crashes and stability issues.</li>
+        <li>Manage BlueTag closed-test invitation requests when you voluntarily provide an email address.</li>
     </ul>
 
-    <h2>7) Security</h2>
-    <p>We store data locally using Android's app storage. No method of storage is 100% secure, but we aim to keep access limited to the app sandbox on your device.</p>
+    <h2>6) Data sharing</h2>
+    <ul>
+        <li>We do not sell your data.</li>
+        <li>We do not upload your Bluetooth scan results, saved device list, or scan history to our own backend server.</li>
+        <li>We use Google Firebase as a service provider for analytics, remote configuration, crash reporting, and optional invite email storage.</li>
+        <li>We may disclose information if required by law or to protect our legal rights, users, or services.</li>
+    </ul>
 
-    <h2>8) Children's privacy</h2>
+    <h2>7) Storage and retention</h2>
+    <ul>
+        <li>Local app data remains on your device until you remove saved data in the app, clear app storage, or uninstall the app.</li>
+        <li>Firebase Analytics and Crashlytics data are retained according to the Firebase project settings and Google's applicable retention controls.</li>
+        <li>BlueTag invite email requests are retained until the invitation or closed-test handling is complete, or until you request deletion.</li>
+    </ul>
+
+    <h2>8) Your choices and controls</h2>
+    <ul>
+        <li>You can avoid closed-test email collection by not submitting the invite form.</li>
+        <li>You can request deletion of a submitted BlueTag invite email by contacting us at <a href="mailto:group.byte.buddies@gmail.com">group.byte.buddies@gmail.com</a>.</li>
+        <li>You can remove local app data by clearing app storage or uninstalling the app.</li>
+        <li>You can control Android permissions through your device settings.</li>
+    </ul>
+
+    <h2>9) Permissions</h2>
+    <p>The app may request permissions required by Android to scan for Bluetooth devices and support app features, such as:</p>
+    <ul>
+        <li>Bluetooth scanning and connection permissions, such as BLUETOOTH_SCAN and BLUETOOTH_CONNECT on Android 12+.</li>
+        <li>Location permission on older Android versions where Android requires it for Bluetooth scanning. The app does not use this to build a location history.</li>
+        <li>Notification permission for supported Android versions when notification features are available.</li>
+        <li>Vibration and audio-related permissions for haptic and sound guidance features.</li>
+        <li>Internet access for Firebase Analytics, Remote Config, Crashlytics, and optional closed-test invite submission.</li>
+    </ul>
+
+    <h2>10) Security</h2>
+    <p>Local app data is stored using Android app storage. Online data is handled through Firebase services. No method of storage or transmission is 100% secure, but we aim to limit collected data to what is needed for the app features described in this policy.</p>
+
+    <h2>11) Children's privacy</h2>
     <p>This app is not intended for children under 13. We do not knowingly collect personal information from children.</p>
 
-    <h2>9) Changes to this policy</h2>
+    <h2>12) Changes to this policy</h2>
     <p>We may update this policy from time to time. The latest version will be available at the same URL, with an updated effective date.</p>
 
-    <h2>10) Contact</h2>
-    <p>If you have questions, contact: <a href="mailto:group.byte.buddies@gmail.com">group.byte.buddies@gmail.com</a></p>
+    <h2>13) Contact</h2>
+    <p>If you have questions or want to request deletion of a submitted closed-test email address, contact: <a href="mailto:group.byte.buddies@gmail.com">group.byte.buddies@gmail.com</a></p>
 </body>
 </html>
